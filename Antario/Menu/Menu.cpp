@@ -30,7 +30,7 @@ void Menu::Render()
 
 	static int iScreenWidth, iScreenHeight;
 
-	static std::string Title = XorStr("stickrpghook - February 8 2019"); // insert p2c name
+	static std::string Title = XorStr("stickrpghookeditedbytomon - February 23 2019");
 	static std::string bottomText = XorStr("copyright (c) stickrpg (dont hex edit)");
 
 	static bool Dragging = false;
