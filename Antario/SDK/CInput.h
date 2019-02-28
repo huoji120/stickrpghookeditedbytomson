@@ -1,6 +1,6 @@
 #pragma once
 #include "Vector.h"
-#include "C:\Users\proto\Desktop\stickrpghook\Antario\SDK/checksum_crc.hpp"
+#include "../SDK/checksum_crc.hpp"
 
 #define MAX_SPLITSCREEN_CLIENT_BITS 2
 // this should == MAX_JOYSTICKS in InputEnums.h
