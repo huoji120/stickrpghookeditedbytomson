@@ -37,6 +37,7 @@ public:
 		bool DelayShot;
 		bool IgnoreLimbs;
 		bool Autostop;
+		bool FakeWalk;
 		bool FixShotPitch;
 		bool PosBacktrack;
 		bool ShotBacktrack;
