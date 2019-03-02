@@ -30,6 +30,7 @@ public:
 		this->InfinityDuck();
 		this->DoBhop();
 		this->DoFakeLag();
+	    	this->FakeWalk();
     };
 
 	void MovementFix(Vector& oldang) // i think osmium
@@ -298,6 +299,25 @@ private:
 		}
 	}
 
+	void DoFakeWalk() const //jonadev simple code
+	{
+		if (!g_Menu.Config.FakeWalk)
+			return;
+
+		if (!g::pLocalEntity->IsAlive())
+			return;
+
+		if (GetAsyncKeyState(VK_SHIFT))
+		{
+			static int choked = 0;
+			choked = choked > 7 ? 0 : choked + 1;
+			pCmd->forwardmove = choked < 2 || choked > 5 ? 0 : pCmd->forwardmove;
+			pCmd->sidemove = choked < 2 || choked > 5 ? 0 : pCmd->sidemove;
+			g::bSendPacket = choked < 1;
+		}
+
+	}
+	
 	void DoFakeLag() const
 	{
 		if (!g_pEngine->IsConnected() || !g_pEngine->IsInGame() || g_Menu.Config.Fakelag == 0 || g_Menu.Config.LegitBacktrack)
