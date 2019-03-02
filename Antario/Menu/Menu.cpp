@@ -149,6 +149,7 @@ void Menu::Render()
 				CheckBox(aimbotname, &Config.Aimbot);
 				Slider(100, "mindamage", &Config.Mindmg);
 				CheckBox("autostop", &Config.Autostop);
+				CheckBox("FakeWalk (SHIFT", &Config.FakeWalk)
 				CheckBox("fix shot pitch", &Config.FixShotPitch);
 				ComboBox("hitchance", { "off", "extra", "normal" }, &Config.Hitchance);
 				if (Config.Hitchance != 0)
