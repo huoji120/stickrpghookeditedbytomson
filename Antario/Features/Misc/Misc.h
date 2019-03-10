@@ -299,7 +299,7 @@ private:
 		}
 	}
 
-	void DoFakeWalk() const //jonadev simple code
+	void FakeWalk() const //jonadev simple code
 	{
 		if (!g_Menu.Config.FakeWalk)
 			return;
